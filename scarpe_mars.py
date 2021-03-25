@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup as soup
+from bs4 import BeautifulSoup as _soup
 import requests
 from splinter import Browser
 from webdriver_manager.chrome import ChromeDriverManager
@@ -18,7 +18,7 @@ def scrape_all():
 
 	html=browser.html
 
-	soup=soup(html,'html.parser')
+	soup=_soup(html,'html.parser')
 
 	results = soup.select_one('ul.item_list li.slide')
 	title=results.find('div', class_='content_title').get_text()
@@ -29,11 +29,13 @@ def scrape_all():
 
 	mars_url = 'https://www.jpl.nasa.gov/images?search=&category=Mars'
 	browser.visit(mars_url)
+	time.sleep(1)
 
 	browser.find_by_css('img.BaseImage').click()
+	time.sleep(3)
 
 	html = browser.html
-	soup = BeautifulSoup(browser.html, 'html.parser')
+	soup = _soup(browser.html, 'html.parser')
 
 	featured_image_url= soup.find('a', class_='BaseButton')['href']
 
