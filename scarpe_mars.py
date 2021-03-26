@@ -46,7 +46,7 @@ def scrape_all():
 	tables = pd.read_html(facts_url)
 
 	df = tables[0]
-	df.columns=['description', 'mars']
+	# df.columns=['description', 'mars']
 	df.set_index('description',inplace=True)
 
 	mars_table=df.to_html()

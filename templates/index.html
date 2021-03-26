@@ -6,23 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mars</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <link rel='stylesheet' type='text/css' href='style2.css'>
+
+
+
 </head>
 
 <body>
   
-  <div>
-    <h1>Let's Visit Mars</h1>
-    <p> <a href ="/scrape">Button</a> </p>
-    <h2>NASA Mars News </h2>
+<div>
+  <h1>Let's Visit Mars</h1>
+    <button type="button" class="btn btn-primary"><a href ="/scrape">Go To Mars</a></button>
+  
+    
+    <h2>NASA Mars News:</h2>
     <div>
-      <p>{{mars.paragraph}}</p>
+      <h3 class ='text-center'>{{mars.title}}</h3>
+      <p class='text-center'>{{mars.paragraph}}</p>
     </div>
+    
     <h2>Mars Space Images</h2>
+    
     <h2>Mars Facts</h2>
-    {{mars.mars_table|safe}}
+     {{mars.mars_table|safe}}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+<section>
 
     <h2>Mars Hemispheres</h2>
+
     {% for planet in mars.planets %}
     <img src="{{planet.picture}}" alt="planets">
     {% endfor %}
@@ -30,6 +59,10 @@
     <img src="{{mars.list_planets }}" alt="planets">
 
   </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 </body>
 
