@@ -7,16 +7,16 @@ h1 {
 }
 
 
-
-h2 {
+h2 { 
+  background-color: CornflowerBlue;
   color: DarkBlue;
   padding-left: 12px
   font-size: 
 }
 
 h3 {
-  background-color: DarkBlue ;
-  color: white;
+  background-color: Cornsilk;
+  color: DarkBlue;
 }
 
 .navbar {
@@ -36,6 +36,8 @@ img {
   
   background-color: lightpurple;
   box-shadow: ;
+  width:15%; 
+  height: 15%;
  
 }
 

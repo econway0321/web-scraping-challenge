@@ -9,7 +9,7 @@
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-  <link rel='stylesheet' type='text/css' href='{{url_for("static", filename="css/style2.css"}}'>
+  <link rel='stylesheet' type='text/css' href='{{url_for("static", filename="css/style2.css")}}'>
 
 
 
@@ -19,29 +19,42 @@
   
 <div>
   <h1>Let's Visit Mars</h1>
-    <button type="button" class="btn btn-primary"><a href ="/scrape">Go To Mars</a></button>
-  
-    
+    <button type="button" class="btn btn-warning"><a href ="/scrape">Go To Mars</a></button>
+<br>
+<br>
+<br>   
     <h2>NASA Mars News:</h2>
     <div>
       <h3 class ='text-center'>{{mars.title}}</h3>
       <p class='text-center'>{{mars.paragraph}}</p>
     </div>
-    
-    <h2>Mars Space Images</h2>
-    
-    <h2>Mars Facts</h2>
+<br>
+<br>
+<br>
+
+    <h2>Mars Space Images:</h2>
+    <img src="{{mars.feature_image}}" alt="planets">
+
+<br>
+<br>
+<br>
+
+    <h2>Mars Facts:</h2>
      {{mars.mars_table|safe}}
-     
+
+<br>
+<br>
+<br>
+
 <section>
 
-    <h2>Mars Hemispheres</h2>
+    <h2>Mars Hemispheres:</h2>
 
     {% for planet in mars.planets %}
     <img src="{{planet.picture}}" alt="planets">
     {% endfor %}
 
-    <img src="{{mars.list_planets }}" alt="planets">
+    <!-- <img src="{{mars.list_planets }}" alt="planets"> -->
 
   </div>
 
